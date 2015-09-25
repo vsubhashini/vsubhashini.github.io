@@ -1,0 +1,94 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+<style type="text/css">
+
+.highlight-box { border:solid 0px #98BE10; background:#F0FFFF; color:#222222; padding:4px; text-align:left; font-size: smaller;}
+label {
+    float: left;
+    padding: 0 1.4em;
+    text-align: center;
+}
+
+#content {
+    MARGIN-LEFT: auto; ; 
+    WIDTH: expression(document.body.clientWidth > 800? "800px": "auto" ); 
+    MARGIN-RIGHT: auto; 
+    TEXT-ALIGN: left; 
+    max-width: 800px
+    }
+body {
+	TEXT-ALIGN: center
+        font-family: Georgia,"New Century Schoolbook",Times,serif;
+}
+
+</style>
+
+<body>
+    <center><h1> Sequence to Sequence -- Video to Text</h1></center>
+
+    <div id=content>
+    <p> We present a novel approach to generate sentence descriptions of videos.</p>
+    <div class="highlight-box">
+    <table border="1" bordercolor="'#306EFF">
+     <h2>
+     <ul>
+    <li> <a href="#abstract">Abstract</a></li> 
+    <li> <a href="#examples">Examples</a></li>
+    <!--<li> <a href="#proscons">Pros and Cons</a></li>-->
+    <li> <a href="#refs">Reference</a></li>
+     </ul>
+    </h2>
+     </table>
+    </div>
+
+    <a name="abstract"></a>
+    <h2>Abstract</h2>
+    <p> 
+    Real-world videos often have complex dynamics; and methods for generating
+open-domain video descriptions should be sensitive to temporal structure and allow both input (sequence of frames) and output (sequence of words) of variable length. 
+To approach this problem, we propose a novel end-to-end sequence-to-sequence model to generate captions for videos. For this we exploit recurrent neural networks, specifically LSTMs, which have demonstrated state-of-the-art performance in image caption generation. 
+Our LSTM model is trained on video-sentence pairs and learns to associate a sequence of video frames to a sequence of words in order to generate a description of the event in the video clip. Our model naturally is able to learn the temporal structure of the sequence of frames as well as the sequence model of the generated sentences, \ie a language model. 
+We evaluate several variants of our model that exploit different visual features on a standard set of YouTube videos and two movie description datasets (M-VAD and MPII-MD).
+    </p>
+
+    <a name="examples"></a>
+    <h2>Examples</h2>
+    <p>
+    Example videos from MPII-MD dataset:
+    <center>
+    <p>
+    <iframe width="420" height="315"
+    src="https://www.youtube.com/embed/XTq0huTXj1M" frameborder="0"
+    allowfullscreen></iframe>
+    </p>
+    <p>&nbsp;</p>
+    </center>
+    Example videos from M-VAD dataset:
+    <center>
+ <!--<p><iframe height="315" frameborder="0" width="560" allowfullscreen=""
+ src="https://youtu.be/pER0mjzSYaM"></iframe></p>-->
+ <p><iframe width="420" height="315"
+ src="https://www.youtube.com/embed/pER0mjzSYaM" frameborder="0"
+ allowfullscreen></iframe></p>
+    <p>&nbsp;</p>
+    </center>
+    </p>
+    
+    <a name="refs"></a>
+    <h2>Reference</h2>
+   <p>[1] S. Venugopalan, M. Rohrbach, J. Donahue, R. Mooney, T. Darrell,  K. Saenko.
+   </br>&nbsp;&nbsp;&nbsp;&nbsp;
+   "Sequence to Sequence - Video to Text." ICCV 2015.
+   </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   Link: <a href="http://arxiv.org/abs/1505.00487">http://arxiv.org/abs/1505.00487</a>
+   </p>
+    </div>
+ 
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</body>
