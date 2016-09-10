@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Subhashini Venugopalan</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/template.css" rel="stylesheet">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-59771467-2', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+    
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+              <!--<li><a href="./index.html#">Home</a></li>
+              <li><a href="./index.html#Research">Research</a></li>
+              <li><a href="./index.html#Contact">Contact</a></li>-->
+            </ul
+          </div><!-- /.navbar-collapse -->
+
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+    <div class="home-intro">
+      <div class="row">
+          <h1 align="center">
+          Improving LSTM-based Video Description
+          with Linguistic Knowledge Mined from Text
+          </h1>
+      </div>
+          <div class="highlight-box">
+           <h2>
+           <div class="center-pills">
+           <ul class="nav nav-pills">
+          <li role="presentation"> <a href="#abstract">Abstract</a></li> 
+          <li role="presentation"> <a href="#overview">Overview</a></li> 
+          <li role="presentation"> <a href="#examples">Examples</a></li>
+          <li role="presentation"> <a href="#code">Code</a></li> 
+          <li role="presentation"> <a href="#refs">Reference</a></li>
+           </ul>
+          </div>
+          </h2>
+          </div>
+
+          <div class="project-page">
+          <a name="abstract"></a>
+          <h2>Abstract</h2>
+          <p class="text-justify">
+This paper investigates how linguistic knowledge mined from large text corpora can aid the generation of natural language descriptions of videos. Specifically, we integrate both a neural language model and distributional semantics trained on large text corpora into a recent LSTM-based architecture for video description. We evaluate our approach on a collection of Youtube videos as well as two large movie description datasets showing significant improvements in grammaticality while modestly improving descriptive quality.
+          </p>
+          <center>
+          <a
+          href="http://arxiv.org/abs/1604.01729" class="btn btn-danger" role="button">PDF</a>
+<!--
+         <a
+          href="https://www.cs.utexas.edu/~vsub/pdf/S2VT_slides.pdf" class="btn btn-success"
+          role="button">Slides</a>
+          <a
+          href="https://www.cs.utexas.edu/~vsub/pdf/S2VT_poster.pdf"
+          class="btn btn-warning"
+          role="button">Poster</a>
+-->
+          </center>
+          </div>
+
+    <hr class="soften"></hr>
+
+          <div class="project-page">
+          <a name="overview"></a>
+          <h2>Overview</h2>
+          <center>
+          <p class="lead">Our goal is to integrate external linguistic knowledge
+          into existing CNN-RNN based video captioning models.</p>
+          <div class="approachimg">
+            <img class="center-block" src="./imgs/lm_fusion/s2vt_lm_teaser.svg"
+            alt="Integrating External Linguistic Knowledge."></img>
+          </div>
+          </center>
+          <center>
+          <p class="lead">We propose techniques to incorporate distributed word
+          embeddings, and monolingual language models trained on large
+          external corpora of text to improve grammar and descriptive quality of
+          the captioning model. </p>
+          <div class="approachimg">
+            <img class="center-block" src="./imgs/lm_fusion/lm_fusion.svg"
+            alt="Late and Deep Fusion."></img>
+          </div>
+          <p class="lead">
+          Late fusion and deep fusion techniques to integrate a language model
+          into the S2VT video description network.
+          </p>
+          </center>
+
+
+          </div>
+
+    <hr class="soften"></hr>
+
+          <div class="project-page">
+          <a name="examples"></a>
+          <h2>Example</h2>
+          <center>
+          <div class="approachimg">
+            <img class="center-block" src="./imgs/lm_fusion/emnlp_fig.svg"
+            alt="Movie example."></img>
+            <p class="lead">
+            An example from one clip in the movie dataset.
+            </p>
+          </div>
+          </center>
+          </div>
+
+    <hr class="soften"></hr>
+
+          <div class="project-page">
+          <a name="code"></a>
+          <h2>Code</h2>
+          <p class="lead">
+            The code to prepare data and train the model can be found in:
+            </br>
+            <a
+            href="https://github.com/vsubhashini/caffe/tree/recurrent/examples/language_fusion">https://github.com/vsubhashini/caffe/tree/recurrent/examples/language_fusion</a>
+            </br>
+            <!--
+            </br>
+            Model information:<a
+            href="https://gist.github.com/vsubhashini/38d087e140854fee4b14"> GitHub_Gist</a>
+            -->
+            </br>
+            Download pre-trained model: <a
+            href="https://www.dropbox.com/s/7g9qt4bt1p7q5bw/lm_deepfus_img512_s2vt_glove_72.7kvocab_sgd_lr2e3step7k_iter_16000.caffemodel?dl=1">InDomain_DeepFusion_Model</a>
+            (741MB)
+            </br>
+            Vocabulary:
+            <a
+            href="https://www.dropbox.com/s/mypl5nxrzemzdm2/vocabulary_72k_surf_intersect_glove.txt?dl=0">language_fusion_vocabulary</a>
+            </br>
+            Evaluation Code:
+            <a
+            href="https://github.com/vsubhashini/caption-eval">https://github.com/vsubhashini/caption-eval</a>
+
+          </p>
+            <h3>Notes:</h3>
+          <p class="lead">
+          <dl style="font-size:16px;">
+            <dt>Caffe Compatibility</dt> <dd>
+            The network is currently supported by the <code>recurrent</code> branch of the
+            Caffe fork
+             in <a href="https://github.com/vsubhashini/caffe.git">my
+             repository</a> or <a
+             href="https://github.com/jdonahue/caffe.git">Jeff's
+             repository</a>
+            but are not yet
+            compatible with the <code>master</code> branch of
+            <a href="https://github.com/BVLC/caffe/">Caffe</a>.
+            </dd>
+          </dl>
+          </p>
+          <h3>Datasets</h3>
+          <p class="lead">
+            The datasets used in the paper are available at these links:
+            </br>
+          <dl style="font-size:16px;">
+            Microsoft Video Description Dataset (Youtube videos):
+            </br>
+            <a
+            href="http://www.cs.utexas.edu/users/ml/clamp/videoDescription/">Project
+            Page - http://www.cs.utexas.edu/users/ml/clamp/videoDescription/</a>
+            </br><a
+            href="http://research.microsoft.com/en-us/downloads/38cf15fd-b8df-477e-a4e4-a4680caa75af/default.aspx">[Raw Data Download
+            Link]</a>
+            <a
+            href="https://www.dropbox.com/sh/4ecwl7zdha60xqo/AAC_TAsR7SkEYhkSdAFKcBlMa?dl=0">[PROCESSED_DATA]</a>
+            </br>
+            MPII Movie Description (MPII-MD) Dataset:
+            </br>
+            <a
+            href="http://www.mpi-inf.mpg.de/movie-description">http://www.mpi-inf.mpg.de/movie-description</a>
+            </br>
+            Montreal Video Annotation Description (M-VAD) Dataset:
+            </br>
+            <a
+            href="http://www.mila.umontreal.ca/Home/public-datasets/montreal-video-annotation-dataset">http://www.mila.umontreal.ca/Home/public-datasets/montreal-video-annotation-dataset</a>
+            </br>
+            </dl>
+          </p>
+          </div>
+
+    <hr class="soften"></hr>
+
+          <div class="project-page">
+          <a name="refs"></a>
+          <h2>Reference</h2>
+          <p class="lead">
+          If you find this useful in your work please consider citing:
+          <div class="highlight">
+          <pre> <code> 
+          @inproceedings{venugopalan16emnlp,
+          title = {Improving LSTM-based Video Description with Linguistic Knowledge Mined from Text},
+          author={Venugopalan, Subhashini and Hendricks, Lisa Anne and Mooney, Raymond and Saenko, Kate},
+          booktitle = {Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+          year = {2016}
+          }
+ </code> </pre>
+
+          </div>
+
+    </div>
+    </div> <!--container-->
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted text-center" style="padding-top: 10px">
+                <a title="Creative Commons Attribution 4.0 International license" target="_blank" href="http://creativecommons.org/licenses/by/4.0/" rel="license">
+                  <img alt="License" src="imgs/cca4-88x31.png"></img>
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/toggle.js"></script>
+  </body>
+</html>
+
