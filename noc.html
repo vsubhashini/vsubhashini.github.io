@@ -58,8 +58,7 @@
     <div class="home-intro">
       <div class="row">
           <h1 align="center">
-          Improving LSTM-based Video Description
-          with Linguistic Knowledge Mined from Text
+          Captioning Images with Diverse Objects
           </h1>
       </div>
           <div class="highlight-box">
@@ -80,17 +79,35 @@
           <a name="abstract"></a>
           <h2>Abstract</h2>
           <p class="text-justify">
-This paper investigates how linguistic knowledge mined from large text corpora can aid the generation of natural language descriptions of videos. Specifically, we integrate both a neural language model and distributional semantics trained on large text corpora into a recent LSTM-based architecture for video description. We evaluate our approach on a collection of Youtube videos as well as two large movie description datasets showing significant improvements in grammaticality while modestly improving descriptive quality.
+          Recent captioning models are limited in their ability to scale and
+          describe concepts unseen in 
+          paired image-text corpora. We propose the Novel Object Captioner
+          (<b>NOC</b>), a deep visual semantic captioning model that can
+          describe a large number of object categories not present in existing
+          image-caption datasets. Our model takes advantage of external sources
+          -- labeled images from object recognition datasets, and semantic
+          knowledge extracted from unannotated text. 
+          We propose minimizing a joint objective which can learn from these
+          diverse data sources and leverage distributional semantic embeddings,
+          enabling the model to generalize and describe novel objects outside of
+          image-caption datasets. 
+          We demonstrate that our model exploits semantic information to
+          generate captions for hundreds of object categories in the ImageNet
+          object recognition dataset that are not observed in MSCOCO
+          image-caption training data, as well as many categories that are
+          observed very rarely. Both automatic evaluations and human judgements
+          show that our model considerably outperforms prior work in being able
+          to describe many more categories of objects.
           </p>
           <center>
           <a
-          href="https://arxiv.org/abs/1604.01729" class="btn btn-danger" role="button">PDF</a>
+          href="https://arxiv.org/abs/1606.07770" class="btn btn-danger" role="button">PDF</a>
 <!--
          <a
-          href="https://www.cs.utexas.edu/~vsub/pdf/S2VT_slides.pdf" class="btn btn-success"
+          href="https://www.cs.utexas.edu/~vsub/pdf/noc_slides.pdf" class="btn btn-success"
           role="button">Slides</a>
           <a
-          href="https://www.cs.utexas.edu/~vsub/pdf/S2VT_poster.pdf"
+          href="https://www.cs.utexas.edu/~vsub/pdf/noc_poster.pdf"
           class="btn btn-warning"
           role="button">Poster</a>
 -->
@@ -103,25 +120,40 @@ This paper investigates how linguistic knowledge mined from large text corpora c
           <a name="overview"></a>
           <h2>Overview</h2>
           <center>
-          <p class="lead">Our goal is to integrate external linguistic knowledge
-          into existing CNN-RNN based video captioning models.</p>
+          <p class="lead">Our goal is to generate captions for novel objects not
+          present in paired image-caption training data but exist in image
+          recognition datasets (e.g. ImageNet).</p>
           <div class="approachimg">
-            <img class="center-block" src="./imgs/lm_fusion/s2vt_lm_teaser.svg"
-            alt="Integrating External Linguistic Knowledge."></img>
+            <img class="center-block" src="./imgs/noc/noc-teaser.svg"
+            alt="Captioning ImageNet objects without corresponding caption training data."></img>
           </div>
           </center>
           <center>
-          <p class="lead">We propose techniques to incorporate distributed word
-          embeddings, and monolingual language models trained on large
-          external corpora of text to improve grammar and descriptive quality of
-          the captioning model. </p>
+          <p class="text-justify">
+          We propose a joint training strategy with auxiliary objectives which
+          allows our network to learn a captioning model on image-caption pairs
+          simultaneously with a deep language model
+          and visual recognition system on unannotated text and labeled images.
+          Unlike previous work, the auxiliary objectives allow
+          the NOC model to learn relevant information
+          from multiple data sources simultaneously in an end-to-end
+          fashion.
+          </p>
           <div class="approachimg">
-            <img class="center-block" src="./imgs/lm_fusion/lm_fusion.svg"
+            <img class="center-block" src="./imgs/noc/noc-model.svg"
             alt="Late and Deep Fusion."></img>
           </div>
-          <p class="lead">
-          Late fusion and deep fusion techniques to integrate a language model
-          into the S2VT video description network.
+          <p class="text-justify">
+          Typically, image-captioning models incorporate a visual classifier
+          pre-trained on a source domain (e.g. ImageNet dataset) and then tune
+          it to the target domain (the image-caption dataset). However,
+          important information from the source dataset can be suppressed if
+          similar information is not present when fine-tuning, leading the
+          network to forget (over-write weights) for objects not present in the
+          target domain. Our joint training strategy remedies this.
+          Additionally, our language model incorporates dense representation of
+          words on both the input and output allowing the model to compose
+          sentences about novel objects.
           </p>
           </center>
 
@@ -134,32 +166,19 @@ This paper investigates how linguistic knowledge mined from large text corpora c
           <a name="examples"></a>
           <h2>Examples</h2>
           <center>
-          <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item"
-          src="https://www.youtube.com/embed/13FPaBCqE1s"
-          allowfullscreen></iframe>
+          <div class="approachimg">
+            <img class="center-block" src="./imgs/noc/ex_noc_context.svg"
+            alt="Captioning novel objects in context."></img>
           </div>
           <p class="lead">
-          Sample clips from Youtube with model output.
+          Example captions of ImageNet objects in different contexts.
           </p>
-          <div class="col-md-6">
-            <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item"
-            src="https://www.youtube.com/embed/kr9GotbUuHU"
-            allowfullscreen></iframe>
-            </div>
-            <p class="lead">
-            Movie Description Examples (Cherries).
-            </p>
+          <div class="approachimg">
+            <img class="center-block" src="./imgs/noc/ex_imnet_compare_dcc_noc.svg"
+            alt="Comparing captions from DCC and NOC."></img>
           </div>
-          <div class="col-md-6">
-            <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item"
-            src="https://www.youtube.com/embed/nHeZM0inMOc"
-            allowfullscreen></iframe>
-            </div>
-            <p class="lead">
-            Movie Description Examples (Lemons i.e. Model makes errors).
+           <p class="lead">
+            Comparing captions generated by our NOC model with prior work (DCC).
             </p>
           </div>
           <!--
@@ -179,72 +198,43 @@ This paper investigates how linguistic knowledge mined from large text corpora c
           <div class="project-page">
           <a name="code"></a>
           <h2>Code</h2>
+          <h1><font color="FF0000">TODO TODO TODO TODO TODO</font></h1>
           <p class="lead">
             The code to prepare data and train the model can be found in:
             </br>
-            <a
+            <!--<a
             href="https://github.com/vsubhashini/caffe/tree/recurrent/examples/language_fusion">https://github.com/vsubhashini/caffe/tree/recurrent/examples/language_fusion</a>
             </br>
+            -->
             <!--
             </br>
             Model information:<a
             href="https://gist.github.com/vsubhashini/38d087e140854fee4b14"> GitHub_Gist</a>
             -->
             </br>
-            Download pre-trained model: <a
+            Download pre-trained model: 
+            <!--<a
             href="https://www.dropbox.com/s/7g9qt4bt1p7q5bw/lm_deepfus_img512_s2vt_glove_72.7kvocab_sgd_lr2e3step7k_iter_16000.caffemodel?dl=1">InDomain_DeepFusion_Model</a>
-            (741MB)
+            (741MB)-->
             </br>
-            Vocabulary:
-            <a
-            href="https://www.dropbox.com/s/mypl5nxrzemzdm2/vocabulary_72k_surf_intersect_glove.txt?dl=0">language_fusion_vocabulary</a>
             </br>
             Evaluation Code:
             <a
             href="https://github.com/vsubhashini/caption-eval">https://github.com/vsubhashini/caption-eval</a>
 
           </p>
-            <h3>Notes:</h3>
+          <h3>Download Captions</h3>
           <p class="lead">
-          <dl style="font-size:16px;">
-            <dt>Caffe Compatibility</dt> <dd>
-            The network is currently supported by the <code>recurrent</code> branch of the
-            Caffe fork
-             in <a href="https://github.com/vsubhashini/caffe.git">my
-             repository</a> or <a
-             href="https://github.com/jdonahue/caffe.git">Jeff's
-             repository</a>
-            but are not yet
-            compatible with the <code>master</code> branch of
-            <a href="https://github.com/BVLC/caffe/">Caffe</a>.
-            </dd>
-          </dl>
-          </p>
-          <h3>Datasets</h3>
-          <p class="lead">
-            The datasets used in the paper are available at these links:
             </br>
           <dl style="font-size:16px;">
-            Microsoft Video Description Dataset (Youtube videos):
+            Captions generated by NOC on MSCOCO images containing the 8 held-out
+            objects.
             </br>
-            <a
-            href="http://www.cs.utexas.edu/users/ml/clamp/videoDescription/">Project
-            Page - http://www.cs.utexas.edu/users/ml/clamp/videoDescription/</a>
-            </br><a
-            href="http://research.microsoft.com/en-us/downloads/38cf15fd-b8df-477e-a4e4-a4680caa75af/default.aspx">[Raw Data Download
-            Link]</a>
-            <a
-            href="https://www.dropbox.com/sh/4ecwl7zdha60xqo/AAC_TAsR7SkEYhkSdAFKcBlMa?dl=0">[PROCESSED_DATA]</a>
+            Captions generated by NOC on ImageNet test images.
             </br>
-            MPII Movie Description (MPII-MD) Dataset:
             </br>
-            <a
-            href="http://www.mpi-inf.mpg.de/movie-description">http://www.mpi-inf.mpg.de/movie-description</a>
+            ImageNet images and captions sampled for Mechanical Turk evaluation.
             </br>
-            Montreal Video Annotation Description (M-VAD) Dataset:
-            </br>
-            <a
-            href="http://www.mila.umontreal.ca/Home/public-datasets/montreal-video-annotation-dataset">http://www.mila.umontreal.ca/Home/public-datasets/montreal-video-annotation-dataset</a>
             </br>
             </dl>
           </p>
@@ -259,11 +249,13 @@ This paper investigates how linguistic knowledge mined from large text corpora c
           If you find this useful in your work please consider citing:
           <div class="highlight">
           <pre> <code> 
-          @inproceedings{venugopalan16emnlp,
-          title = {Improving LSTM-based Video Description with Linguistic Knowledge Mined from Text},
-          author={Venugopalan, Subhashini and Hendricks, Lisa Anne and Mooney, Raymond and Saenko, Kate},
-          booktitle = {Conference on Empirical Methods in Natural Language Processing (EMNLP)},
-          year = {2016}
+          @inproceedings{venugopalan17cvpr,
+          title = {Captioning Images with Diverse Objects},
+          author={Venugopalan, Subhashini and Hendricks, Lisa Anne and Rohrbach,
+          Marcus and Mooney, Raymond, and Darrell, Trevor and Saenko, Kate},
+          booktitle = {Proceedings of the IEEE Conference on Computer Vision and
+          Pattern Recognition (CVPR)},
+          year = {2017}
           }
  </code> </pre>
 
