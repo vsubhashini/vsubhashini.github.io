@@ -67,20 +67,25 @@
           <img class="img-circle" src="./imgs/subha_face_med.jpg"></img>
         </div>
         <div class="col-md-8">
-          <h1>Subhashini Venugopalan </br><small>Computer Science Ph.D. student</small></h1>
+          <h1>Subhashini Venugopalan </br><small>Research Scientist</small></h1>
           <p class="lead">
-            I work in the intersection of natural language processing, computer vision and machine learning. 
-            My advisor is <a target="_blank" href="http://www.cs.utexas.edu/~mooney/">Prof. Ray Mooney</a> and
-            I'm a member of the <a target="_blank" href="http://www.cs.utexas.edu/~ml/">Machine Learning Group</a> at UT Austin.
+            I am an ML/Vision researcher at Google working on problems in the
+            intersection of biology, medicine, and machine learning.
+            Prior to this, I was a PhD student at UT Austin working on natural
+            language processing, and computer vision.
+            I was a member of the <a target="_blank"
+              href="http://www.cs.utexas.edu/~ml/">Machine Learning Group</a>,
+            and was advised by <a target="_blank"
+              href="http://www.cs.utexas.edu/~mooney/">Prof. Ray Mooney</a>.
           </p>
           <p class="text-justify">
-          I am fortunate to also work with <a target="_blank"
+          During my PhD I was also fortunate to work with <a target="_blank"
           href="http://www.eecs.berkeley.edu/~trevor/">Prof. Trevor Darrell</a>'s
           group at UC Berkeley and with <a target="_blank"
           href="http://vision.cs.uml.edu/ksaenko.html">Prof. Kate Saenko</a> at
           Boston University.
-          The last couple of summers I worked on computer vision and deep learning projects at
-          Google Research (host: Varun Gulshan) and Google Brain (host: Andrea Frome). 
+          I spent several summers working on deep learning projects at
+          Google Research (host: Varun Gulshan) and Google Brain (host: Andrea Frome).
            Prior to joining UT, I spent a year at IBM Research, India (Blue scholar).
           </p>
           <p class="text-justify"> In 2011, I obtained a Masters degree in Computer Science 
@@ -101,12 +106,573 @@
     <div class="publications">
       <h1> Research </h1>
       <p class="lead">
-        I apply machine learning algorithms along with natural language
-        processing and computer vision techniques to generate descriptions of events depicted in videos. 
-        
+        I enjoy applying machine learning to data of all modalities, and have
+        worked with images, videos, text, audio, speech, and accelerometer.
+        Some of my work pertains to transfer learning for bio/medical data
+        (e.g. detecting <a target="_blank"
+                        href="https://jamanetwork.com/journals/jama/article-abstract/2588763">diabetic
+                        retinopathy</a>,
+                        <a target="_blank"
+                        href="https://ai.googleblog.com/2017/03/assisting-pathologists-in-detecting.html">breast
+                        cancer</a>), and I have also developed methods
+        to interpret such vision/audio models (model explanation) for medical applications.
+        I have also applied natural language
+        processing and computer vision techniques to generate descriptions of
+        events depicted in videos and images.
+        Please refer to <a target="_blank"
+                           href="https://scholar.google.com/citations?user=TmWYBeEAAAAJ&hl=en">my Google
+                           Scholar page</a> for an up-to-date list of my publications.
+
       </p>
       </br>
-      <h2> Publications </h2>
+      <h2> Bio/Medical applications, Model Explanation </h2>
+      </br>
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/dmeexp.png"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>
+              Scientific Discovery by Generating Counterfactuals using Image
+              Translation
+          </br> <small>
+            Arunachalam Narayanaswamy*, Subhashini Venugopalan*, Dale R. Webster,
+            Lily Peng, Greg Corrado, Paisan Ruamviboonsuk, Pinal Bavishi, Rory
+            Sayres, Abigail Huang, Siva Balasubramanian, Michael Brenner, Philip
+            Nelson, Avinash V. Varadarajan
+          </br> *equal contribution
+          </small></h3>
+          </div>
+          <div class="pubv">
+            International Conference on Medical Image Computing and Computer
+            Assisted Intervention
+            (Lima, Peru) Virtual, October 2020. (MICCAI 2020)
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-dmeexp', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+                  href="https://arxiv.org/abs/2007.05500">PDF</a>]</li>
+              <li>[<a
+              href="https://docs.google.com/presentation/d/1pPFFQe8nGQazh0AygiHaX7MHY6dtE7UX7p_lP2KZ2FU/edit?usp=drivesdk">Slides</a>]</li>
+              <li>[<a
+              href="https://youtu.be/0Q-4EQriYJs?t=9146">Video</a>]</li>
+	         <div id="togContent-dmeexp" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 Model explanation techniques play a critical role in
+                 understanding the source of a model's performance and making
+                 its decisions transparent. Here we investigate if explanation
+                 techniques can also be used as a mechanism for scientific
+                 discovery. We make three contributions: first, we propose a
+                 framework to convert predictions from explanation techniques to
+                 a mechanism of discovery. Second, we show how generative models
+                 in combination with black-box predictors can be used to
+                 generate hypotheses (without human priors) that can be
+                 critically examined. Third, with these techniques we study
+                 classification models for retinal images predicting Diabetic
+                 Macular Edema (DME), where recent work showed that a CNN
+                 trained on these images is likely learning novel features in
+                 the image. We demonstrate that the proposed framework is able
+                 to explain the underlying scientific mechanism, thus bridging
+                 the gap between the model's performance and human
+                 understanding.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/blurig.gif"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>
+              Attribution in Scale and Space`
+          </br> <small>
+            Shawn Xu, Subhashini Venugopalan, Mukund Sundararajan
+          </small></h3>
+          </div>
+          <div class="pubv">
+            IEEE Conference on Computer Vision and Pattern Recognition,
+            (Seattle, USA) Virtual June 2020. (CVPR 2020)
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-blurig', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+                  href="https://openaccess.thecvf.com/content_CVPR_2020/html/Xu_Attribution_in_Scale_and_Space_CVPR_2020_paper.html">PDF</a>]</li>
+              <li>[<a
+              href="https://github.com/vsubhashini/saliency">Code</a>]</li>
+              <li>[<a
+              href="https://docs.google.com/presentation/d/1AmtId4MdvwcwV6GBK6eoeUpcquIv18QKFo9jhwC7xrE/edit?usp=drivesdk">Slides</a>]</li>
+              <li>[<a
+              href="https://www.youtube.com/watch?v=0iof_BMe1Q0">Video</a>]</li>
+	         <div id="togContent-blurig" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 We study the attribution problem for deep networks applied to
+                 perception tasks. For vision tasks, attribution techniques
+                 attribute the prediction of a network to the pixels of the
+                 input image. We propose a new technique called Blur Integrated
+                 Gradients (Blur IG). This technique has several advantages over
+                 other methods. First, it can tell at what scale a network
+                 recognizes an object. It produces scores in the scale/frequency
+                 dimension, that we find captures interesting phenomena. Second,
+                 it satisfies the scale-space axioms, which imply that it
+                 employs perturbations that are free of artifact. We therefore
+                 produce explanations that are cleaner and consistent with the
+                 operation of deep networks. Third, it eliminates the need for
+                 baseline parameter for Integrated Gradients for perception
+                 tasks. This is desirable because the choice of baseline has a
+                 significant effect on the explanations. We compare the proposed
+                 technique against previous techniques and demonstrate
+                 application on three tasks: ImageNet object recognition,
+                 Diabetic Retinopathy prediction, and AudioSet audio event
+                 identification. Code and examples are at
+                 https://github.com/PAIR-code/saliency.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/smug.png"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>
+              Scaling Symbolic Methods using Gradients for Neural Model
+              Explanation
+          </br> <small>
+            Subham Sekhar Sahoo, Subhashini Venugopalan, Li Li, Rishabh Singh,
+            Patrick Riley
+          </small></h3>
+          </div>
+          <div class="pubv">
+            ArXiV, June 2020
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-smug', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+                  href="https://arxiv.org/abs/2006.16322">PDF</a>]</li>
+	         <div id="togContent-smug" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 Symbolic techniques based on Satisfiability Modulo Theory (SMT)
+                 solvers have been proposed for analyzing and verifying neural
+                 network properties, but their usage has been fairly limited
+                 owing to their poor scalability with larger networks. In this
+                 work, we propose a technique for combining gradient-based
+                 methods with symbolic techniques to scale such analyses and
+                 demonstrate its application for model explanation. In
+                 particular, we apply this technique to identify minimal regions
+                 in an input that are most relevant for a neural network's
+                 prediction. Our approach uses gradient information (based on
+                 Integrated Gradients) to focus on a subset of neurons in the
+                 first layer, which allows our technique to scale to large
+                 networks. The corresponding SMT constraints encode the minimal
+                 input mask discovery problem such that after masking the input,
+                 the activations of the selected neurons are still above a
+                 threshold. After solving for the minimal masks, our approach
+                 scores the mask regions to generate a relative ordering of the
+                 features within the mask. This produces a saliency map which
+                 explains" where a model is looking" when making a prediction.
+                 We evaluate our technique on three datasets-MNIST, ImageNet,
+                 and Beer Reviews, and demonstrate both quantitatively and
+                 qualitatively that the regions generated by our approach are
+                 sparser and achieve higher saliency scores compared to the
+                 gradient-based methods alone.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/octdme.webp"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>
+              Predicting optical coherence tomography-derived diabetic macular
+              edema grades from fundus photographs using deep learning
+          </br> <small>
+            Avinash V Varadarajan, Pinal Bavishi, Paisan Ruamviboonsuk, Peranut
+            Chotcomwongse, Subhashini Venugopalan, Arunachalam Narayanaswamy,
+            Jorge Cuadros, Kuniyoshi Kanai, George Bresnick, Mongkol Tadarati,
+            Sukhum Silpa-Archa, Jirawut Limwattanayingyong, Variya Nganthavee,
+            Joseph R Ledsam, Pearse A Keane, Greg S Corrado, Lily Peng, Dale R
+            Webster
+          </small></h3>
+          </div>
+          <div class="pubv">
+            Nature Communications, 2020.
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-octdme', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+              href="https://www.nature.com/articles/s41467-019-13922-8">PDF</a>]</li>
+	         <div id="togContent-octdme" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 Center-involved diabetic macular edema (ci-DME) is a major
+                 cause of vision loss. Although the gold standard for diagnosis
+                 involves 3D imaging, 2D imaging by fundus photography is
+                 usually used in screening settings, resulting in high
+                 false-positive and false-negative calls. To address this, we
+                 train a deep learning model to predict ci-DME from fundus
+                 photographs, with an ROC–AUC of 0.89 (95% CI: 0.87–0.91),
+                 corresponding to 85% sensitivity at 80% specificity. In
+                 comparison, retinal specialists have similar sensitivities
+                 (82–85%), but only half the specificity (45–50%, p &lt; 0.001).
+                 Our model can also detect the presence of intraretinal fluid
+                 (AUC: 0.81; 95% CI: 0.81–0.86) and subretinal fluid (AUC 0.88;
+                 95% CI: 0.85–0.91). Using deep learning to make predictions via
+                 simple 2D images without sophisticated 3D-imaging equipment and
+                 with better than specialist performance, has broad relevance to
+                 many other applications in medical imaging.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/anemia.png"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>
+              Detection of anaemia from retinal fundus images via deep learning
+          </br> <small>
+            Akinori Mitani, Abigail Huang, Subhashini Venugopalan, Greg S
+            Corrado, Lily Peng, Dale R Webster, Naama Hammel, Yun Liu, Avinash V
+            Varadarajan
+          </small></h3>
+          </div>
+          <div class="pubv">
+            Nature BioMedical Engineering, 2019.
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-anemia', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+              href="https://www.nature.com/articles/s41551-019-0487-z.epdf?author_access_token=Mb6E0T7s890wrwn-g74d7tRgN0jAjWel9jnR3ZoTv0PM60VmCAPkIZuQsecTYZaotsFV6G9aJmsrn_AQFPFU2RjouiPiJkz-OeJ5RQJ8kv85ZFtWEW_cRKjzdTuC9kzUqD9bVzmUo3TIVRhqirtaaQ%3D%3D">PDF</a>]</li>
+              <li>[<a
+              href="https://blog.google/technology/health/anemia-detection-retina/">Blog
+              Post</a>]</li>
+	         <div id="togContent-anemia" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 Owing to the invasiveness of diagnostic tests for anaemia and
+                 the costs associated with screening for it, the condition is
+                 often undetected. Here, we show that anaemia can be detected
+                 via machine-learning algorithms trained using retinal fundus
+                 images, study participant metadata (including race or
+                 ethnicity, age, sex and blood pressure) or the combination of
+                 both data types (images and study participant metadata). In a
+                 validation dataset of 11,388 study participants from the UK
+                 Biobank, the metadata-only, fundus-image-only and combined
+                 models predicted haemoglobin concentration (in g dl–1) with
+                 mean absolute error values of 0.73 (95% confidence interval:
+                 0.72–0.74), 0.67 (0.66–0.68) and 0.63 (0.62–0.64),
+                 respectively, and with areas under the receiver operating
+                 characteristic curve (AUC) values of 0.74 (0.71–0.76), 0.87
+                 (0.85–0.89) and 0.88 (0.86–0.89), respectively. For 539 study
+                 participants with self-reported diabetes, the combined model
+                 predicted haemoglobin concentration with a mean absolute error
+                 of 0.73 (0.68–0.78) and anaemia an AUC of 0.89 (0.85–0.93).
+                 Automated anaemia screening on the basis of fundus images could
+                 particularly aid patients with diabetes undergoing regular
+                 retinal imaging and for whom anaemia can increase morbidity and
+                 mortality risks.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/eccb.jpg"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>
+              Batch Equalization with a Generative Adversarial Network
+          </br> <small>
+            Wesley Wei Qian, Cassandra Xia, Subhashini Venugopalan, Arunachalam
+            Narayanaswamy, Jian Peng, D Michael Ando
+          </small></h3>
+          </div>
+          <div class="pubv">
+            European Conference on Computational Biology (ECCB) 2020.
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-eccb', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+              href="https://www.biorxiv.org/content/10.1101/2020.02.07.939215v1.abstract">PDF</a>]</li>
+	         <div id="togContent-eccb" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 Advances in automation and imaging have made it possible to
+                 capture large image datasets for experiments that span multiple
+                 weeks with multiple experimental batches of data. However,
+                 accurate biological comparisons across the batches is
+                 challenged by the batch-to-batch variation due to
+                 uncontrollable experimental noise (e.g., different stain
+                 intensity or illumination conditions). To mediate the batch
+                 variation (i.e. the batch effect), we developed a batch
+                 equalization method that can transfer images from one batch to
+                 another while preserving the biological phenotype. The
+                 equalization method is trained as a generative adversarial
+                 network (GAN), using the StarGAN architecture that has shown
+                 considerable ability in doing style transfer for consumer
+                 images. After incorporating an additional objective that
+                 disentangles batch effect from biological features using an
+                 existing GAN framework, we show that the equalized images have
+                 less batch information as determined by a batch-prediction task
+                 and perform better in a biologically relevant task (e.g.,
+                 Mechanism of Action prediction).
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/confounding.png"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>
+              It's easy to fool yourself: Case studies on identifying bias and
+              confounding in bio-medical datasets
+          </br> <small>
+            Subhashini Venugopalan*, Arunachalam Narayanaswamy*, Samuel Yang*,
+            Anton Gerashcenko, Scott Lipnick, Nina Makhortova, James Hawrot,
+            Christine Marques, Joao Pereira, Michael Brenner, Lee Rubin, Brian
+            Wainger, Marc Berndl
+          </br> *equal contribution
+          </small></h3>
+          </div>
+          <div class="pubv">
+            NeurIPS Learning Meaningful Representations of Life (LMRL) Workshop,
+            2019.
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-confounding', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+              href="https://arxiv.org/abs/1912.07661">PDF</a>]</li>
+              <li>[<a
+              href="https://drive.google.com/file/d/1-HY4mNNnyc767YaUso6-lFOLkhvwnf6m/view?usp=drivesdk">Poster</a>]</li>
+	         <div id="togContent-confounding" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 Confounding variables are a well known source of nuisance in
+                 biomedical studies. They present an even greater challenge when
+                 we combine them with black-box machine learning techniques that
+                 operate on raw data. This work presents two case studies. In
+                 one, we discovered biases arising from systematic errors in the
+                 data generation process. In the other, we found a spurious
+                 source of signal unrelated to the prediction task at hand. In
+                 both cases, our prediction models performed well but under
+                 careful examination hidden confounders and biases were
+                 revealed. These are cautionary tales on the limits of using
+                 machine learning techniques on raw data from scientific
+                 experiments.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/slas.gif"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>
+              Applying Deep Neural Network Analysis to High-Content Image-Based Assays
+          </br> <small>
+            Samuel J Yang*, Scott L Lipnick*, Nina R Makhortova*, Subhashini
+            Venugopalan*, Minjie Fan*, Zan Armstrong, Thorsten M Schlaeger, Liyong Deng, Wendy K Chung, Liadan O’Callaghan, Anton Geraschenko, Dosh Whye, Marc Berndl, Jon Hazard, Brian Williams, Arunachalam Narayanaswamy, D Michael Ando, Philip Nelson, Lee L Rubin
+          </br> *equal contribution
+          </small></h3>
+          </div>
+          <div class="pubv">
+            SLAS DISCOVERY: Advancing Life Sciences R&D, 2019
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-slas', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+              href="https://journals.sagepub.com/doi/abs/10.1177/2472555219857715">PDF</a>]</li>
+              <li>[<a
+              href="">Slides</a>]</li>
+	         <div id="togContent-slas" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 The etiological underpinnings of many CNS disorders are not well understood. This is likely due to the fact that individual diseases aggregate numerous pathological subtypes, each associated with a complex landscape of genetic risk factors. To overcome these challenges, researchers are integrating novel data types from numerous patients, including imaging studies capturing broadly applicable features from patient-derived materials. These datasets, when combined with machine learning, potentially hold the power to elucidate the subtle patterns that stratify patients by shared pathology. In this study, we interrogated whether high-content imaging of primary skin fibroblasts, using the Cell Painting method, could reveal disease-relevant information among patients. First, we showed that technical features such as batch/plate type, plate, and location within a plate lead to detectable nuisance signals, as revealed by a pre-trained deep neural network and analysis with deep image embeddings. Using a plate design and image acquisition strategy that accounts for these variables, we performed a pilot study with 12 healthy controls and 12 subjects affected by the severe genetic neurological disorder spinal muscular atrophy (SMA), and evaluated whether a convolutional neural network (CNN) generated using a subset of the cells could distinguish disease states on cells from the remaining unseen control–SMA pair. Our results indicate that these two populations could effectively be differentiated from one another and that model selectivity is insensitive to batch/plate type. One caveat is that the samples were also largely separated by source. These findings lay a foundation for how to conduct future studies exploring diseases with more complex genetic contributions and unknown subtypes.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/pathology.png"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>Detecting cancer metastases on gigapixel pathology images
+          </br> <small>
+            Yun Liu, Krishna Gadepalli, Mohammad Norouzi, George E Dahl, Timo
+            Kohlberger, Aleksey Boyko, Subhashini Venugopalan, Aleksei Timofeev,
+            Philip Q Nelson, Greg S Corrado, Jason D Hipp, Lily Peng, Martin C
+            Stumpe
+          </small></h3>
+          </div>
+          <div class="pubv">
+            ArXiv, 2017
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-pathology', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+              href="https://arxiv.org/abs/1703.02442">PDF</a>]</li>
+              <li>[<a
+              href="https://ai.googleblog.com/2017/03/assisting-pathologists-in-detecting.html">Blog
+              Post</a>]</li>
+	         <div id="togContent-pathology" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 Each year, the treatment decisions for more than 230,000 breast cancer patients in the U.S. hinge on whether the cancer has metastasized away from the breast. Metastasis detection is currently performed by pathologists reviewing large expanses of biological tissues. This process is labor intensive and error-prone. We present a framework to automatically detect and localize tumors as small as 100 x 100 pixels in gigapixel microscopy images sized 100,000 x 100,000 pixels. Our method leverages a convolutional neural network (CNN) architecture and obtains state-of-the-art results on the Camelyon16 dataset in the challenging lesion-level tumor detection task. At 8 false positives per image, we detect 92.4% of the tumors, relative to 82.7% by the previous best automated approach. For comparison, a human pathologist attempting exhaustive search achieved 73.2% sensitivity. We achieve image-level AUC scores above 97% on both the Camelyon16 test set and an independent set of 110 slides. In addition, we discover that two slides in the Camelyon16 training set were erroneously labeled normal. Our approach could considerably reduce false negative rates in metastasis detection.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/jama.png"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+           <h3>Development and Validation of a Deep Learning Algorithm for Detection of Diabetic Retinopathy in Retinal Fundus Photographs 
+          </br> <small>
+            Varun Gulshan, Lily Peng, Marc Coram, Martin C Stumpe, Derek Wu, Arunachalam Narayanaswamy, Subhashini Venugopalan, Kasumi Widner, Tom Madams, Jorge Cuadros, Ramasamy Kim, Rajiv Raman, Philip C Nelson, Jessica L Mega, Dale R Webster
+          </small></h3>
+          </div>
+          <div class="pubv">
+            The Journal of the American Medical Association (JAMA), 2016.
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-jama', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+              href="https://jamanetwork.com/journals/jama/article-abstract/2588763">PDF</a>]</li>
+              <li>[<a
+              href="https://ai.googleblog.com/2016/11/deep-learning-for-detection-of-diabetic.html">Blog
+              Post</a>]</li>
+              <li>[<a
+              href="https://jamanetwork.com/journals/jama/pages/editor-picks-2010-2019">Best
+                of the Decade</a>]</li>
+	         <div id="togContent-jama" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 <b>Question</b>  How does the performance of an automated deep learning algorithm compare with manual grading by ophthalmologists for identifying diabetic retinopathy in retinal fundus photographs?
+                 </br>
+                 <b>Finding</b>  In 2 validation sets of 9963 images and 1748 images, at the operating point selected for high specificity, the algorithm had 90.3% and 87.0% sensitivity and 98.1% and 98.5% specificity for detecting referable diabetic retinopathy, defined as moderate or worse diabetic retinopathy or referable macular edema by the majority decision of a panel of at least 7 US board-certified ophthalmologists. At the operating point selected for high sensitivity, the algorithm had 97.5% and 96.1% sensitivity and 93.4% and 93.9% specificity in the 2 validation sets.
+                 </br>
+                 <b>Meaning</b>  Deep learning algorithms had high sensitivity and specificity for detecting diabetic retinopathy and macular edema in retinal fundus photographs.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      </br>
+      <h2> Vision and Language </h2>
       </br>
 
       <div class="pwrap">
