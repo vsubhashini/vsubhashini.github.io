@@ -106,7 +106,8 @@
     <div class="publications">
       <h1> Research </h1>
       <p class="lead">
-        I enjoy applying machine learning to visual, text, and audio data.
+        I enjoy applying machine learning to visual, text, and audio data; in
+        particular for healthcare applications.
         Some of my work pertains to transfer learning for bio/medical data
         (e.g. detecting <a target="_blank"
                         href="https://jamanetwork.com/journals/jama/article-abstract/2588763">diabetic
@@ -126,6 +127,135 @@
       </br>
       <h2> Medical applications, Interpretability </h2>
       </br>
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/finch_animation.gif"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>
+              Guided Integrated Gradients: An Adaptive Path Method for Removing
+              Noise
+          </br> <small>
+            Andrei Kapishnikov, Subhashini Venugopalan, Besim Avci, Ben Wedin,
+            Michael Terry, Tolga Bolukbasi
+          </small></h3>
+          </div>
+          <div class="pubv">
+            IEEE Conference on Computer Vision and Pattern Recognition.
+            Virtual. June 2021. (CVPR 2021)
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-guidedig', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+                  href="https://openaccess.thecvf.com/content/CVPR2021/html/Kapishnikov_Guided_Integrated_Gradients_An_Adaptive_Path_Method_for_Removing_Noise_CVPR_2021_paper.html">PDF</a>]</li>
+              <li>[<a
+                  href="https://pair-code.github.io/saliency/#guided-ig">Project
+                Page</a>]</li>
+              <li>[<a
+                  href="https://github.com/PAIR-code/saliency/blob/master/docs/CVPR_Guided_IG_Poster.pdf">Poster</a>]</li>
+              <li>[<a
+                  href="https://github.com/PAIR-code/saliency">Code</a>]</li>
+	         <div id="togContent-guidedig" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 Integrated Gradients (IG) is a commonly used feature
+                 attribution method for deep neural networks. While IG has many
+                 desirable properties, the method often produces spurious/noisy
+                 pixel attributions in regions that are not related to the
+                 predicted class when applied to visual models. While this has
+                 been previously noted, most existing solutions are aimed at
+                 addressing the symptoms by explicitly reducing the noise in the
+                 resulting attributions. In this work, we show that one of the
+                 causes of the problem is the accumulation of noise along the IG
+                 path. To minimize the effect of this source of noise, we
+                 propose adapting the attribution path itself -- conditioning
+                 the path not just on the image but also on the model being
+                 explained. We introduce Adaptive Path Methods (APMs) as a
+                 generalization of path methods, and Guided IG as a specific
+                 instance of an APM. Empirically, Guided IG creates saliency
+                 maps better aligned with the model's prediction and the input
+                 image that is being explained. We show through qualitative and
+                 quantitative experiments that Guided IG outperforms other,
+                 related methods in nearly every experiment.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/smug.png"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>
+              Scaling Symbolic Methods using Gradients for Neural Model
+              Explanation
+          </br> <small>
+            Subham Sekhar Sahoo, Subhashini Venugopalan, Li Li, Rishabh Singh,
+            Patrick Riley
+          </small></h3>
+          </div>
+          <div class="pubv">
+            International Conference on Learned Representations (ICLR). May 2021.
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-smug', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+                  href="https://arxiv.org/abs/2006.16322">PDF</a>]</li>
+              <li>[<a
+                  href="https://iclr.cc/media/Slides/iclr/2021/virtual(03-16-00)-03-16-00UTC-2581-scaling_symboli.pdf">Slides</a>]</li>
+              <li>[<a
+                  href="https://github.com/google-research/google-research/tree/master/smug_saliency">Code</a>]</li>
+	         <div id="togContent-smug" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 Symbolic techniques based on Satisfiability Modulo Theory (SMT)
+                 solvers have been proposed for analyzing and verifying neural
+                 network properties, but their usage has been fairly limited
+                 owing to their poor scalability with larger networks. In this
+                 work, we propose a technique for combining gradient-based
+                 methods with symbolic techniques to scale such analyses and
+                 demonstrate its application for model explanation. In
+                 particular, we apply this technique to identify minimal regions
+                 in an input that are most relevant for a neural network's
+                 prediction. Our approach uses gradient information (based on
+                 Integrated Gradients) to focus on a subset of neurons in the
+                 first layer, which allows our technique to scale to large
+                 networks. The corresponding SMT constraints encode the minimal
+                 input mask discovery problem such that after masking the input,
+                 the activations of the selected neurons are still above a
+                 threshold. After solving for the minimal masks, our approach
+                 scores the mask regions to generate a relative ordering of the
+                 features within the mask. This produces a saliency map which
+                 explains" where a model is looking" when making a prediction.
+                 We evaluate our technique on three datasets-MNIST, ImageNet,
+                 and Beer Reviews, and demonstrate both quantitatively and
+                 qualitatively that the regions generated by our approach are
+                 sparser and achieve higher saliency scores compared to the
+                 gradient-based methods alone.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
 
       <div class="pwrap">
       <div class="row">
@@ -307,67 +437,6 @@
                  Diabetic Retinopathy prediction, and AudioSet audio event
                  identification. Code and examples are at
                  https://github.com/PAIR-code/saliency.
-               </p>
-	         </div>
-            </ul>
-          </div>
-        </div>
-      </div>
-      </div>
-
-      <div class="pwrap">
-      <div class="row">
-        <div class="col-md-4" style="padding-top: 20px">
-          <div class="pubimg">
-            <img src="./imgs/smug.png"</img>
-          </div>
-        </div>
-        <div class="col-md-8">
-          <div class="pubt">
-            <h3>
-              Scaling Symbolic Methods using Gradients for Neural Model
-              Explanation
-          </br> <small>
-            Subham Sekhar Sahoo, Subhashini Venugopalan, Li Li, Rishabh Singh,
-            Patrick Riley
-          </small></h3>
-          </div>
-          <div class="pubv">
-            International Conference on Learned Representations (ICLR) 2021.
-          </div>
-          <div class="publ">
-            <ul>
-            <li>[<a onclick="toggle('togContent-smug', this);return
-            false">+Abstract</a>] </li>
-              <li>[<a
-                  href="https://arxiv.org/abs/2006.16322">PDF</a>]</li>
-	         <div id="togContent-smug" style="display:none">
-	           <p class="text-justify">
-                 <i>Abstract:</i>
-                 Symbolic techniques based on Satisfiability Modulo Theory (SMT)
-                 solvers have been proposed for analyzing and verifying neural
-                 network properties, but their usage has been fairly limited
-                 owing to their poor scalability with larger networks. In this
-                 work, we propose a technique for combining gradient-based
-                 methods with symbolic techniques to scale such analyses and
-                 demonstrate its application for model explanation. In
-                 particular, we apply this technique to identify minimal regions
-                 in an input that are most relevant for a neural network's
-                 prediction. Our approach uses gradient information (based on
-                 Integrated Gradients) to focus on a subset of neurons in the
-                 first layer, which allows our technique to scale to large
-                 networks. The corresponding SMT constraints encode the minimal
-                 input mask discovery problem such that after masking the input,
-                 the activations of the selected neurons are still above a
-                 threshold. After solving for the minimal masks, our approach
-                 scores the mask regions to generate a relative ordering of the
-                 features within the mask. This produces a saliency map which
-                 explains" where a model is looking" when making a prediction.
-                 We evaluate our technique on three datasets-MNIST, ImageNet,
-                 and Beer Reviews, and demonstrate both quantitatively and
-                 qualitatively that the regions generated by our approach are
-                 sparser and achieve higher saliency scores compared to the
-                 gradient-based methods alone.
                </p>
 	         </div>
             </ul>
@@ -1258,6 +1327,65 @@ Kate Saenko, Raymond Mooney
       <p> In the past I have researched on topics in public policy, theoretical cryptography
       and social network analysis.</p>
       </br>
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/etiology_dist.png"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>
+              Comparing Supervised Models And Learned Speech Representations For
+              Classifying Intelligibility Of Disordered Speech On Selected
+              Phrases
+          </br> <small>
+            Subhashini Venugopalan, Joel Shor, Manoj Plakal, Jimmy Tobin, Katrin
+            Tomanek, Jordan Green, Michael Brenner
+          </small></h3>
+          </div>
+          <div class="pubv">
+            INTERSPEECH 2021. Brno, Czechia (+Virtual). August 2021.
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-dyscls', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+                  href="https://vsubhashini.github.io">PDF</a>]</li>
+              <li>[<a
+                  href="https://vsubhashini.github.io">Video</a>]</li>
+	         <div id="togContent-dyscls" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+Automatic classification of disordered speech can provide an objective tool
+for identifying the presence and severity of speech impairment. Classification
+approaches can also help identify hard-to-recognize speech samples to teach ASR
+systems about the variable manifestations of impaired speech. Here, we develop
+and compare different deep learning techniques to classify the intelligibility
+of disordered speech on selected phrases. We collected samples from a diverse
+set of 661 speakers with a variety of self-reported disorders speaking 29 words
+or phrases, which were rated by speech-language pathologists for their overall
+intelligibility using a five-point Likert scale. We then evaluated classifiers
+developed using 3 approaches: (1) a convolutional neural network (CNN) trained
+for the task, (2) classifiers trained on non-semantic speech representations
+from CNNs that used an unsupervised objective [1], and (3) classifiers trained
+on the acoustic (encoder) embeddings from an ASR system trained on typical
+speech [2]. We found that the ASR encoder's embeddings considerably outperform
+the other two on detecting and classifying disordered speech. Further analysis
+shows that the ASR embeddings cluster speech by the spoken phrase, while the
+non-semantic embeddings cluster speech by speaker. Also, longer phrases are
+more indicative of intelligibility deficits than single words.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
       <div class="pwrap">
       <div class="row">
         <div class="col-md-4">
