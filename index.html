@@ -109,16 +109,15 @@
     <div class="publications">
       <h1> Research </h1>
       <p class="lead">
-        I work on machine learning applications of visual, text, and audio data;
-        large motivated in
+        I work on machine learning applications motivated in
             <a target="_blank"
               href="https://www.youtube.com/watch?v=V5aZjsWM2wo">healthcare</a>
-            applications. I am a key contributor to a number of works featuring in
+            and sciences. I am a key contributor to a number of works featuring in
             the
             <a target="_blank"
               href="https://www.youtube.com/watch?v=V5aZjsWM2wo">Healed through
             A.I.</a> documentary.
-        Some of my work pertains improving speech recognition systems for users
+        Some of my work pertains to improving speech recognition systems for users
         with <a target="_blank"
                 href="https://sites.research.google/euphonia/about/">impaired
                 speech</a>, others to transfer learning for bio/medical data
@@ -138,8 +137,195 @@
 
       </p>
       </br>
-      <h2> Medical applications, Interpretability </h2>
+      <h2> Healthcare applications, Interpretability </h2>
       </br>
+
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/sf_naacl.png"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>
+              Context-Aware Abbreviation Expansion Using Large Language Models
+          </br> <small>
+            Shanqing Cai*, Subhashini Venugopalan*, Katrin Tomanek, Ajit
+            Narayanan, Meredith Ringel Morris, Michael P. Brenner
+          </br> *equal contribution
+          </small></h3>
+          </div>
+          <div class="pubv">
+            NAACL. Seattle, USA (+Virtual). July 2022.
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-dyscls', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+                  href="https://arxiv.org/abs/2205.03767">PDF</a>]</li>
+	         <div id="togContent-dyscls" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 Motivated by the need for accelerating text entry in
+                 augmentative and alternative communication (AAC) for people
+                 with severe motor impairments, we propose a paradigm in which
+                 phrases are abbreviated aggressively as primarily word-initial
+                 letters. Our approach is to
+                 expand the abbreviations into full-phrase options by leveraging
+                 conversation context with
+                 the power of pretrained large language models (LLMs). Through
+                 zero-shot, few-shot, and
+                 fine-tuning experiments on four public conversation datasets,
+                 we show that for replies to the
+                 initial turn of a dialog, an LLM with 64B parameters is able to
+                 accurately expand over 70%
+                 of phrases with abbreviation length up to 10,
+                 leading to an effective keystroke saving rate of
+                 up to 77% on these expansions. Including a
+                 small amount of context in the form of a single
+                 conversation turn more than doubles abbreviation expansion
+                 accuracies compared to having
+                 no context, an effect that is more pronounced
+                 for longer phrases. Additionally, the robustness of the models
+                 against typo noise can be
+                 enhanced through fine-tuning on noisy data.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/voice_cnn.png"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>
+              A machine-learning based objective measure for ALS disease
+              severity
+          </br> <small>
+            Fernando G. Vieira*, Subhashini Venugopalan*, Alan S. Premasiri, Maeve
+            McNally, Aren Jansen, Kevin McCloskey, Michael P. Brenner, Steven
+            Perrin
+          </br> *equal contribution
+          </small></h3>
+          </div>
+          <div class="pubv">
+            npj Digital Medicine. April 2022
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-dyscls', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+                  href="https://www.nature.com/articles/s41746-022-00588-8">PDF</a>]</li>
+	         <div id="togContent-dyscls" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 Amyotrophic Lateral Sclerosis (ALS) disease severity is usually
+                 measured using the subjective, questionnaire-based revised ALS
+                 Functional Rating Scale (ALSFRS-R). Objective measures of
+                 disease severity would be powerful tools for evaluating
+                 real-world drug effectiveness, efficacy in clinical trials, and
+                 for identifying participants for cohort studies. We developed a
+                 machine learning (ML) based objective measure for ALS disease
+                 severity based on voice samples and accelerometer measurements
+                 from a four-year longitudinal dataset. 584 people living with
+                 ALS consented and carried out prescribed speaking and
+                 limb-based tasks. 542 participants contributed 5814 voice
+                 recordings, and 350 contributed 13,009 accelerometer samples,
+                 while simultaneously measuring ALSFRS-R scores. Using these
+                 data, we trained ML models to predict bulbar-related and
+                 limb-related ALSFRS-R scores. On the test set (n = 109
+                 participants) the voice models achieved a multiclass AUC of
+                 0.86 (95% CI, 0.85–0.88) on speech ALSFRS-R prediction, whereas
+                 the accelerometer models achieved a median multiclass AUC of
+                 0.73 on 6 limb-related functions. The correlations across
+                 functions observed in self-reported ALSFRS-R scores were
+                 preserved in ML-derived scores. We used these models and
+                 self-reported ALSFRS-R scores to evaluate the real-world
+                 effects of edaravone, a drug approved for use in ALS. In the
+                 cohort of 54 test participants who received edaravone as part
+                 of their usual care, the ML-derived scores were consistent with
+                 the self-reported ALSFRS-R scores. At the individual level, the
+                 continuous ML-derived score can capture gradual changes that
+                 are absent in the integer ALSFRS-R scores. This demonstrates
+                 the value of these tools for assessing disease severity and,
+                 potentially, drug effects.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/trillsson.png"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>
+              TRILLsson: Distilled Universal Paralinguistic Speech
+              Representations
+          </br> <small>
+            Joel Shor, Subhashini Venugopalan
+          </small></h3>
+          </div>
+          <div class="pubv">
+            INTERSPEECH 2022. Incheon, South Korea (+Virtual). September 2022.
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-dyscls', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+                  href="https://arxiv.org/abs/2203.00236">PDF</a>]</li>
+              <li>[<a
+                  href="https://ai.googleblog.com/2022/03/trillsson-small-universal-speech.html">Blogpost</a>]</li>
+	         <div id="togContent-dyscls" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 Recent advances in self-supervision have dramatically improved
+                 the quality of speech representations. However, deployment of
+                 state-of-the-art embedding models on devices has been
+                 restricted due to their limited public availability and large
+                 resource footprint. Our work addresses these issues by publicly
+                 releasing a collection of paralinguistic speech models that are
+                 small and near state-of-the-art performance. Our approach is
+                 based on knowledge distillation, and our models are distilled
+                 on public data only. We explore different architectures and
+                 thoroughly evaluate our models on the Non-Semantic Speech
+                 (NOSS) benchmark. Our largest distilled model is less than 15%
+                 the size of the original model (314MB vs 2.2GB), achieves over
+                 96% the accuracy on 6 of 7 tasks, and is trained on 6.5% the
+                 data. The smallest model is 1% in size (22MB) and achieves over
+                 90% the accuracy on 6 of 7 tasks. Our models outperform the
+                 open source Wav2Vec 2.0 model on 6 of 7 tasks, and our smallest
+                 model outperforms the open source Wav2Vec 2.0 on both emotion
+                 recognition tasks despite being 7% the size.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
 
       <div class="pwrap">
       <div class="row">
