@@ -137,6 +137,207 @@
 
       </p>
       </br>
+      <h2> Publications </h2>
+      </br>
+
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/GNT.png"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>
+              Is Attention All That NeRF Needs?
+          </br> <small>
+            Mukund Varma T*, Peihao Wang*, Xuxi Chen, Tianlong Chen,
+            Subhashini Venugopalan, Zhangyang Wang
+          </br> *equal contribution
+          </small></h3>
+          </div>
+          <div class="pubv">
+            ICLR. Kigali, Rwanda. May 2023.
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-dyscls', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+                  href="https://github.com/VITA-Group/GNT/blob/main/docs/assets/gnt.pdf">PDF</a>]</li>
+              <li>[<a
+                  href="https://github.com/VITA-Group/GNT">Code</a>]</li>
+              <li>[<a
+                  href="https://vita-group.github.io/GNT/">Project Page</a>]</li>
+	         <div id="togContent-dyscls" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 We present Generalizable NeRF Transformer (GNT), a pure,
+                 unified transformer-based architecture that efficiently
+                 reconstructs Neural Radiance Fields (NeRFs) on the fly from
+                 source views. Unlike prior works on NeRF that optimize a
+                 per-scene implicit representation by inverting a handcrafted
+                 rendering equation, GNT achieves generalizable neural scene
+                 representation and rendering, by encapsulating two
+                 transformers-based stages. The first stage of GNT, called view
+                 transformer, leverages multi-view geometry as an inductive bias
+                 for attention-based scene representation, and predicts
+                 coordinate-aligned features by aggregating information from
+                 epipolar lines on the neighboring views. The second stage of
+                 GNT, named ray transformer, renders novel views by ray marching
+                 and directly decodes the sequence of sampled point features
+                 using the attention mechanism. Our experiments demonstrate that
+                 when optimized on a single scene, GNT can successfully
+                 reconstruct NeRF without explicit rendering formula, and even
+                 improve the PSNR by ~1.3 dB↑ on complex scenes due to the
+                 learnable ray renderer. When trained across various scenes, GNT
+                 consistently achieves the state-of-the-art performance when
+                 transferring to forward-facing LLFF dataset (LPIPS ~20%↓, SSIM
+                 ~25%↑) and synthetic blender dataset (LPIPS ~20%↓, SSIM ~4%↑).
+                 In addition, we show that depth and occlusion can be inferred
+                 from the learned attention maps, which implies that the pure
+                 attention mechanism is capable of learning a
+                 physically-grounded rendering process. All these results bring
+                 us one step closer to the tantalizing hope of utilizing
+                 transformers as the "universal modeling tool" even for
+                 graphics.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/speakfaster_observer2.png"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>
+              SpeakFaster Observer: Long-Term Instrumentation of Eye-Gaze Typing
+              for Measuring AAC Communication
+          </br> <small>
+            Shanqing Cai, Subhashini Venugopalan, Katrin Tomanek,
+             Shaun Kane, Meredith Ringel Morris, Richard Cave, Bob
+             MacDonald, Jon Campbell, Blair Casey, Emily Kornman, Daniel Vance,
+             Jay Beavers
+          </small></h3>
+          </div>
+          <div class="pubv">
+            CHI. Hamburg, Germany. April 2023.
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-dyscls', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+                  href="https://research.google/pubs/pub52025/">PDF</a>]</li>
+	         <div id="togContent-dyscls" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 Accelerating communication for users with severe motor and
+                 speech impairments, in particular for eye-gaze Augmentative and
+                 Alternative Communication (AAC) device users, is a
+                 long-standing area of research. However, observation of such
+                 users' communication over extended durations has been limited.
+                 This case study presents the real-world experience of
+                 developing and field-testing a tool for observing and curating
+                 the gaze typing-based communication of a consented eye-gaze AAC
+                 user with amyotrophic lateral sclerosis (ALS) from the
+                 perspective of researchers at the intersection of HCI and
+                 artificial intelligence (AI). With the intent to observe and
+                 accelerate eye-gaze typed communication, we designed a tool and
+                 a protocol called the SpeakFaster Observer to measure everyday
+                 conversational text entry by the consenting gaze-typing user,
+                 as well as several consenting conversation partners of the AAC
+                 user. We detail the design of the Observer software and data
+                 curation protocol, along with considerations for privacy
+                 protection. The deployment of the data protocol from November
+                 2021 to April 2022 yielded a rich dataset of gaze-based AAC
+                 text entry in everyday context, consisting of 130+ hours of
+                 gaze keypresses and 5.5k+ curated speech utterances from the
+                 AAC user and the conversation partners. We present the key
+                 statistics of the data, including the speed (8.1±3.9 words per
+                 minute) and keypress saving rate (-0.18±0.87) of gaze typing,
+                 patterns of of utterance repetition and reuse, as well as the
+                 temporal dynamics of conversation turn-taking in gaze-based
+                 communication. We share our findings and also open source our
+                 data collections tools for furthering research in this domain.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/sparse_tickets.png"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>
+              Sparse Winning Tickets are Data-Efficient Image Recognizers
+          </br> <small>
+            Mukund Varma, Xuxi Chen, Zhenyu Zhang, Tianlong Chen,
+            Subhashini Venugopalan, Zhangyang Wang
+          </small></h3>
+          </div>
+          <div class="pubv">
+            NeurIPS. New Orleans, USA. Dec. 2022.
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-dyscls', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+                  href="https://openreview.net/forum?id=wfKbtSjHA6F">PDF</a>]</li>
+              <li>[<a
+                  href="https://docs.google.com/presentation/d/1gVNX23VgFRUR9e_4tHvBlMBXLg6wnMQoa_zWOri1rWM/edit?usp=sharing">Slides</a>]</li>
+              <li>[<a
+                  href="https://github.com/VITA-Group/DataEfficientLTH">Code</a>]</li>
+	         <div id="togContent-dyscls" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 Improving performance of deep networks in data limited regimes
+                 has warranted much attention. In this work, we empirically show
+                 that “winning tickets” (small subnetworks) obtained via
+                 magnitude pruning based on the lottery ticket hypothesis, apart
+                 from being sparse are also effective recognizers in data
+                 limited regimes. Based on extensive experiments, we find that
+                 in low data regimes (datasets of 50-100 examples per class),
+                 sparse winning tickets substantially outperform the original
+                 dense networks. This approach, when combined with augmentations
+                 or fine-tuning from a self-supervised backbone network, shows
+                 further improvements in performance by as much as 16%
+                 (absolute) on low sample datasets and longtailed
+                 classification. Further, sparse winning tickets are more robust
+                 to synthetic noise and distribution shifts compared to their
+                 dense counterparts. Our analysis of winning tickets on small
+                 datasets indicates that, though sparse, the networks retain
+                 density in the initial layers and their representations are
+                 more generalizable.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      </br>
       <h2> Healthcare applications, Interpretability </h2>
       </br>
 
