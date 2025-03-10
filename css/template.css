@@ -89,6 +89,10 @@ hr.soften {
   margin-bottom: 50px;
   border-bottom: 1px solid #DDD;
 }
+.twrap {
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+}
 .pubimg img {
   max-width: 100%;
   min-height: 175px;
