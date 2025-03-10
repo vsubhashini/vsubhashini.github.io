@@ -199,6 +199,116 @@
       <div class="row">
         <div class="col-md-4" style="padding-top: 20px">
           <div class="pubimg">
+            <img src="./imgs/llm_asr_rl.png"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>
+              Speech Recognition With LLMs Adapted to Disordered Speech Using
+              Reinforcement Learning
+          </br> <small>
+            Chirag Nagpal*, Subhashini Venugopalan*, Jimmy Tobin, Marilyn Ladewig,
+            Katherine Heller, Katrin Tomanek
+          </small></h3>
+          </div>
+          <div class="pubv">
+            ICASSP. April 2025.
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-llm-asr-rl', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+                  href="https://arxiv.org/abs/2412.19315">PDF</a>]</li>
+	         <div id="togContent-llm-asr-rl" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 We introduce a large language model (LLM) capable of processing
+                 speech inputs and show that tuning it further with
+                 reinforcement learning on human preference (RLHF) enables it to
+                 adapt better to disordered speech than traditional fine-tuning.
+                 Our method replaces low-frequency text tokens in an LLM's
+                 vocabulary with audio tokens and enables the model to recognize
+                 speech by fine-tuning it on speech with transcripts. We then
+                 use RL with rewards based on syntactic and semantic accuracy
+                 measures generalizing the LLM further to recognize disordered
+                 speech. While the resulting LLM does not outperform existing
+                 systems for speech recognition, we find that tuning with
+                 reinforcement learning using custom rewards leads to
+                 substantially better performance than supervised fine-tuning of
+                 the language model, specifically when adapting to speech in a
+                 different setting. This presents a compelling alternative
+                 tuning strategy for speech recognition using large language
+                 models.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
+            <img src="./imgs/usm_si_asr.png"</img>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pubt">
+            <h3>
+              Towards a Single ASR Model That Generalizes to Disordered Speech
+          </br> <small>
+            Jimmy Tobin, Katrin Tomanek, Subhashini Venugopalan
+          </small></h3>
+          </div>
+          <div class="pubv">
+            ICASSP. April 2025.
+          </div>
+          <div class="publ">
+            <ul>
+            <li>[<a onclick="toggle('togContent-usm-siasr', this);return
+            false">+Abstract</a>] </li>
+              <li>[<a
+                  href="https://arxiv.org/abs/2412.19315">PDF</a>]</li>
+	         <div id="togContent-usm-siasr" style="display:none">
+	           <p class="text-justify">
+                 <i>Abstract:</i>
+                 This study investigates the impact of integrating a dataset of
+                 disordered speech recordings (∼1,000 hours) into the
+                 fine-tuning of a near state-of-the-art ASR baseline system.
+                 Contrary to what one might expect, despite the data being less
+                 than 1% of the training data of the ASR system, we find a
+                 considerable improvement in disordered speech recognition
+                 accuracy. Specifically, we observe a 33% improvement on
+                 prompted speech, and a 26% improvement on a newly gathered
+                 spontaneous, conversational dataset of disordered speech.
+                 Importantly, there is no significant performance decline on
+                 standard speech recognition benchmarks. Further, we observe
+                 that the proposed tuning strategy helps close the gap between
+                 the baseline system and personalized models by 64% highlighting
+                 the significant progress as well as the room for improvement.
+                 Given the substantial benefits of our findings, this experiment
+                 suggests that from a fairness perspective, incorporating a
+                 small fraction of high quality disordered speech data in a
+                 training recipe is an easy step that could be done to make
+                 speech technology more accessible for users with speech
+                 disabilities.
+               </p>
+	         </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+      <div class="pwrap">
+      <div class="row">
+        <div class="col-md-4" style="padding-top: 20px">
+          <div class="pubimg">
             <img src="./imgs/spiqa_teaser.png"</img>
           </div>
         </div>
